@@ -43,8 +43,8 @@ export default function Home() {
       <div className="container mx-auto mt-3">
         <div className="grid grid-cols-4">
           {
-            testDetails.map((test) =>
-              <TestCard testDetails={test}></TestCard>
+            testDetails.map((test, index) =>
+              <TestCard testDetails={{...test, id: index}} key={index}></TestCard>
             )
           }
         </div>

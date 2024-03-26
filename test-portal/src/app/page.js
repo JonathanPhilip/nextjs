@@ -21,7 +21,8 @@ const testDetails = [{
   duration: 1.5,
   numberOfQuestions: 10,
   totalScore: 100,
-}, {
+},
+ {
   topic: "NodeJS",
   duration: 1.5,
   numberOfQuestions: 10,
@@ -30,7 +31,7 @@ const testDetails = [{
 
 export default function Home() {
   return (
-    <div className="container pt-3 bg-sky-300 h-screen">
+    <div className="container pt-3 bg-gray-100 h-screen">
       <div className="grid grid-cols-2">
         <div className="px-4 py-2 text-lg font-sans font-bold text-white"></div>
         <div className="flex justify-end pr-4">
@@ -43,8 +44,8 @@ export default function Home() {
       <div className="container mx-auto mt-3">
         <div className="grid grid-cols-4">
           {
-            testDetails.map((test) =>
-              <TestCard testDetails={test}></TestCard>
+            testDetails.map((test, index) =>
+              <TestCard key={index} testDetails={test}></TestCard>
             )
           }
         </div>
@@ -52,3 +53,4 @@ export default function Home() {
     </div>
   );
 }
+

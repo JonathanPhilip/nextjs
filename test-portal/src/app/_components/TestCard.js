@@ -1,4 +1,3 @@
-
 export default function TestCard(props) {
     const { testDetails } = props;
     return (
@@ -12,4 +11,4 @@ export default function TestCard(props) {
             </div>
         </div>
     )
-}
+} 
